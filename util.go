@@ -40,6 +40,12 @@ func pack(typ string, value interface{}, _isArray bool) []byte {
 		}
 
 		return Address(value)
+	case "bytes":
+		bytes, err := hex.DecodeString(value.(string)[2:])
+		if err != nil {
+			panic(err)
+		}
+		return bytes
 	case "string":
 		return String(value)
 	case "bool":
