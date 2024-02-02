@@ -4,7 +4,7 @@ import (
 	"encoding/hex"
 	"fmt"
 
-	"github.com/miguelmota/go-solidity-sha3"
+	solsha3 "github.com/bnb-attestation-service/go-solidity-sha3"
 )
 
 func main() {
